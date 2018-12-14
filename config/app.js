@@ -8,6 +8,8 @@ app = require('../config/path')(app);
 app = require('../config/error')(app);
 app = require('../config/port')(app);
 
+require('../config/database');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
